@@ -1,0 +1,8 @@
+.nav-collapse
+  %ul.nav
+    %li= link_to "Home", root_path, :class => 'brand'
+    - if current_user
+      %li= link_to "Logout", logout_path, :class => 'brand'
+    - else
+      %li= link_to "Signup", signup_path, :class => 'brand'
+      %li= link_to "Login", login_path, :class => 'brand'

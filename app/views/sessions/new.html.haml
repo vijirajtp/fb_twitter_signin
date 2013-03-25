@@ -1,0 +1,14 @@
+%h1 Log In
+= form_tag sessions_path do
+  .field
+    = label_tag :email
+    = text_field_tag :email, params[:email]
+  .field
+    = label_tag :password
+    = password_field_tag
+  .actions
+    = submit_tag "Log In"
+    OR
+    = link_to 'Login with facebook', facebook_start_oauth_index_path
+    |
+    = link_to 'Login with Twitter', twitter_path, :method => :post
